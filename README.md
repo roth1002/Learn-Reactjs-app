@@ -1,2 +1,3 @@
 # Learn-Reactjs-app
-learn how to build a React.js App
+Learn how to build a React.js App
+follow https://egghead.io/
