@@ -5,6 +5,7 @@ import Notes from './Notes/Notes';
 import Firebase from 'firebase';
 import helpers from '../utils/helpers';
 import Rebase from 're-base';
+import '../../less/components/Profile.less';
 
 var base = Rebase.createClass('https://github-note-taker.firebaseio.com/');
 

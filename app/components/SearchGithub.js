@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../less/components/SearchGithub.less';
 
 class SearchGithub extends React.Component{
 	handleSubmit(){
