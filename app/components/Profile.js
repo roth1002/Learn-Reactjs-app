@@ -7,7 +7,8 @@ import helpers from '../utils/helpers';
 import Rebase from 're-base';
 import '../../less/components/Profile.less';
 
-var base = Rebase.createClass('https://github-note-taker.firebaseio.com/');
+// var base = Rebase.createClass('https://github-note-taker.firebaseio.com/');
+var base = Rebase.createClass('https://notetaker-practice.firebaseio.com/');
 
 class Profile extends React.Component{
 	constructor(props){
@@ -51,6 +52,15 @@ class Profile extends React.Component{
 			data: this.state.notes.concat([newNote])
 		});
 	}
+	handleDeleteNote(index){
+		this.setState({
+			notes: this.state.notes.splice(index,1)
+		});
+
+		base.post(this.router.getCurrentParams().username, {
+			data: this.state.notes
+		});
+	}
 	render(){
 		var username = this.router.getCurrentParams().username;
 		return(
@@ -65,7 +75,8 @@ class Profile extends React.Component{
 					<Notes
 						username={username}
 						notes={this.state.notes}
-						addNote={this.handleAddNote.bind(this)} />
+						addNote={this.handleAddNote.bind(this)}
+						deleteNote={this.handleDeleteNote.bind(this)}/>
 				</div>
 			</div>
 		)
