@@ -17,7 +17,7 @@
     "less": "^2.5.1",
     "less-loader": "^2.2.0",
     "re-base": "^1.0.1",
-    "react": "^0.13.3",
+    "react": "^16.13.1",
     "reactfire": "^0.4.0",
     "style-loader": "^0.12.3",
     "url-loader": "^0.5.6"
